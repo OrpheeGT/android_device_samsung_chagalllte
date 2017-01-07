@@ -4,6 +4,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony.mk)
 
 $(call inherit-product, device/samsung/chagalllte/device.mk)
 
+PRODUCT_BRAND := samsung
+
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
