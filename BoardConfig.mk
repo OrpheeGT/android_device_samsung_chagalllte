@@ -35,13 +35,21 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 TARGET_OTA_ASSERT_DEVICE := chagalllte
 
 # Kernel
-TARGET_KERNEL_CONFIG := cyanogenmod_deathly_chagalllte_defconfig
+TARGET_KERNEL_VARIANT_CONFIG := exynos5420_chagalllte_defconfig
 
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Cyanogen Hardware
 BOARD_HARDWARE_CLASS := $(LOCAL_PATH)/cmhw
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(LOCAL_PATH)/releasetools
+
+# Vendor Init
+TARGET_UNIFIED_DEVICE := true
+TARGET_INIT_VENDOR_LIB := libinit_chagalllte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_chagalllte
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 8388608
