@@ -35,7 +35,7 @@ inline const char* BtmGetDefaultName()
 	return "SM-T805";
 }
 
-+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 
 // Networking, Capturing, Object Transfer
 // MAJOR CLASS: COMPUTER
