@@ -17,7 +17,25 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "SM-T805"
+#include <cutils/properties.h>
+#include <string.h>
+
+inline const char* BtmGetDefaultName()
+{
+	char product_name[PROPERTY_VALUE_MAX];
+	property_get("ro.product.name", product_name, "");
+
+	if (!strcmp("klimtlteub", product_name))
+		return "SM-T805M";
+	if (!strcmp("klimtltecan", product_name))
+		return "SM-T805W";
+	if (!strcmp("klimtltedo", product_name))
+		return "SM-T805Y";
+
+	return "SM-T805";
+}
+
++#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 
 // Networking, Capturing, Object Transfer
 // MAJOR CLASS: COMPUTER
